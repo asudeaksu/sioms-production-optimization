@@ -1,6 +1,4 @@
-# sioms-production-optimization# 
-
-SIOMS Production Optimization
+# SIOMS Production Optimization
 
 ## Overview
 
