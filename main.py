@@ -65,7 +65,7 @@ def search_product():
                 print("=" * 30)
                 return
             
-            print("Product not found.")
+        print("Product not found.")
 
 
 def delete_product():
@@ -101,16 +101,20 @@ def update_product():
 
 def save_to_csv():
     print("SAVE FUNCTION STARTED")
+    print("Number of products:", len(products))
+
     with open("products.csv", "w", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(["name", "category", "quantity", "price"])
+
         for product in products:
             writer.writerow([
-        product["name"],
-        product["category"],
-        product["quantity"],
-        product["price"]
-    ])
+                product["name"],
+                product["category"],
+                product["quantity"],
+                product["price"]
+            ])
+            
 
 
 def load_from_csv():
