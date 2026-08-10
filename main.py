@@ -30,8 +30,17 @@ def get_choice():
 def add_product():
     product_name = input("Product Name: ")
     category = input("Category: ")
-    quantity = input("Quantity: ")
-    price = input("Price: ")
+
+    try:
+        quantity = int(input("Quantity: "))
+        price = float(input("Price: "))
+    except ValueError:
+        print("Invalid input. Quantity must be an integer and price must be a number.")
+        return
+    if quantity < 0 or price < 0:
+        print("Quantity and price cannot be negative.")
+        return
+
 
     cursor.execute(
         """
@@ -105,8 +114,17 @@ def delete_product():
 
 def update_product():
     update_name = input("Enter product name to update: ")
-    new_quantity = input("Write new quantity: ")
-    new_price = input("Write new price: ")
+
+    try:
+        new_quantity = int(input("Write new quantity: "))
+        new_price = float(input("Write new price: "))
+    except ValueError:
+        print("Invalid input. Quantity must be an integer and price must be a number.")
+        return
+    if new_quantity < 0 or new_price < 0:
+        print("Quantity and price cannot be negative.")
+        return      
+
 
     cursor.execute(
         """
@@ -165,9 +183,6 @@ def show_summary():
 
 def main():
 
-    #save_to_csv()
-    #load_from_csv()
-
     while True:
         show_title()
         show_menu()
@@ -198,6 +213,7 @@ def main():
 
         elif choice == "8":
             print("Goodbye!")
+            connection.close()
             break
 
         else:
