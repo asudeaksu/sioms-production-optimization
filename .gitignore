@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+.DS_Store
+.DS_Store
+=======
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.vscode/
+>>>>>>> f54dff30fe2046c8e08e1b2157edab80bb562072
+sioms.db
+sioms_backup.db
+
