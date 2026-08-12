@@ -1,48 +1,52 @@
 # SIOMS — Smart Inventory & Operations Management System
 
-## Overview
+> An inventory management and analytics project combining Python, SQL, Excel, and Power BI.
 
-SIOMS (Smart Inventory & Operations Management System) is a Python-based inventory and operations management project developed as part of my Industrial Engineering learning journey at Bilkent University.
+## 📌 Project Overview
 
-The project focuses on managing inventory data, performing basic inventory analysis, and building a foundation for future production optimization and data visualization workflows.
+SIOMS (Smart Inventory & Operations Management System) is an inventory and operations management project developed as part of my Industrial Engineering learning journey at Bilkent University.
 
-## Current Features
+The project demonstrates an end-to-end workflow for managing inventory data, storing it in a relational database, performing inventory analysis, and presenting the results through spreadsheet analysis and business intelligence visualization.
 
-### Inventory Management
-- Add new products
-- Display all products
-- Search products by name
-- Update product quantity and price
-- Delete products
+The main goal is to connect **inventory management, data analysis, and visualization** within a single project.
 
-### Data Management
-- Store inventory data in CSV format
-- Load inventory data automatically when the application starts
-- Save changes after adding, updating, or deleting products
-- Maintain persistent inventory data between program sessions
+---
 
-### Inventory Analysis
-- Calculate total number of products
-- Calculate total items in stock
-- Calculate total inventory value
+## 🎯 Project Objectives
 
-## Technologies
+The project focuses on:
 
-- Python
-- CSV
-- Pandas
-- NumPy
+- Managing product and inventory information
+- Maintaining persistent inventory data
+- Validating inventory inputs
+- Storing structured inventory data using SQLite
+- Performing SQL-based inventory analysis
+- Calculating inventory values and stock quantities
+- Identifying low-stock products
+- Analyzing inventory data in Excel
+- Creating a Power BI dashboard for visualization
+- Combining multiple data and analytics tools into one workflow
 
-## Project Structure
+---
+
+## 🔄 Project Workflow
+
+The project follows the workflow below:
 
 ```text
-SIOMS/
-│
-├── main.py
-├── production_optimizer.py
-├── products.csv
-├── requirements.txt
-├── data/
-├── outputs/
-├── docs/
-└── README.md
+                    Inventory Data
+                          │
+                          ▼
+                    Python Application
+                          │
+                          ▼
+                     SQLite Database
+                          │
+                          ▼
+                     SQL Analysis
+                          │
+                          ▼
+                    Excel Analysis
+                          │
+                          ▼
+                  Power BI Dashboard
